@@ -14,13 +14,20 @@ fi
 
 source $controlfolder/control.txt
 source $controlfolder/device_info.txt
-
+export PORT_32BIT="N"
 [ -f "${controlfolder}/mod_${CFW_NAME}.txt" ] && source "${controlfolder}/mod_${CFW_NAME}.txt"
 
 get_controls
 
 GAMEDIR=/$directory/ports/luckbealandlord/
 CONFDIR="$GAMEDIR/conf/"
+
+# check if we have new enough version of PortMaster that contains xdelta3
+if [ ! -f "$controlfolder/xdelta3" ]; then
+  echo "This port requires the latest PortMaster to run, please go to https://portmaster.games/ for more info." > /dev/tty0
+  sleep 5
+  exit 1
+fi
 
 # Patch game
 if [ -f "/$GAMEDIR/gamedata/Luck be a Landlord-patched.pck" ]; then
@@ -30,7 +37,7 @@ elif [ -f "/$GAMEDIR/gamedata/Luck be a Landlord.pck" ]; then
   echo "patching Luck be a Landlord.pck"
   export LD_LIBRARY_PATH=/$GAMEDIR/lib
   cd /$GAMEDIR/gamedata/
-  $SUDO $controlfolder/xdelta3 -d -s "Luck be a Landlord.pck" "Luck be a Landlord.xdelta" "Luck be a Landlord-patched.pck"
+  $ESUDO $controlfolder/xdelta3 -d -s "Luck be a Landlord.pck" "Luck be a Landlord.xdelta" "Luck be a Landlord-patched.pck"
 fi
 
 # Ensure the conf directory exists
