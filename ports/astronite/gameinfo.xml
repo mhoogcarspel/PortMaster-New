@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./Astronite.sh</path>
+    <name>Astronite</name>
+    <desc>Astronite is a 1bit Metroidvania where you will find a big map full of hidden secrets. Get the power ups and travel through all the zones. Fight many different enemies, explore platforming areas and defeat big bosses that will stand in your way. Your goal is clear: eliminate the invasive species from your home planet.</desc>
+    <releasedate>20221130T000000</releasedate>
+    <developer>Dume Games Studio</developer>
+    <publisher>JanduSoft</publisher>
+    <genre>Adventure</genre>
+    <image>./astronite/cover.png</image>
+  </game>
+</gameList>

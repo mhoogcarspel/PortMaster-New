@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "name": "astronite.zip",
+  "items": [
+    "Astronite.sh",
+    "astronite"
+  ],
+  "items_opt": [],
+  "attr": {
+    "title": "Astronite",
+    "porter": [
+      "Kompaan",
+      "mattyj513"
+    ],
+    "desc": "Astronite is a 1bit metroidvania that combines action, exploration, puzzles and platforms. Recover the planet where you and yours lived before it was invaded by strange creatures.",
+    "inst": "Download game from https://store.steampowered.com/app/1489590/Astronite/ , copy data.win and all .ogg files to /ports/astronite/gamedata",
+    "genres": [
+      "adventure"
+    ],
+    "image": null,
+    "rtr": false,
+    "runtime": null,
+    "reqs": [
+      "!lowres"
+    ],
+    "arch": [
+      "armhf"
+    ]
+  }
+}
